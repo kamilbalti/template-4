@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./template4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navPara">HOME</a>
+        <a href="#about" class="navPara">ABOUT</a>
+        <a href="#menu" class="navPara">MENU</a>
+        <a href="#where" class="navPara">WHERE</a>
+    </div>
+    <div class="header">
+            <p class="headTiming headPara">Open from 6am to 5pm</p>
+            <h1 class="cafeHeading">the <br /> Cafe</h1>
+            <p class="headAddress headPara">15 Adr street, 5015</p>
+    </div>
+    <div id="about" class="aboutParentDiv">
+    <div class="aboutChildDiv">
+        <h1 class="aboutHead">ABOUT THE CAFE</h1>
+        <p class="aboutPara">The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+            commodo consequat.</p>
+        <p class="aboutpara">In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast 
+            and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+        <div class="bgGray">
+            <p class="bgGrayPara italic">"Use products from nature for what it's worth - but never too early, nor too late." 
+                Fresh is the new sweet.</p>
+            <p class="bgGrayPara">Chef, Coffeeist and Owner: Liam Brown</p>
+        </div>
+        <img class="cafePic" src="https://www.w3schools.com/w3images/coffeeshop.jpg"/>
+        <p class="timeAddress"><b>Opening hours: </b>everyday from 6am to 5pm.</p>
+        <p class="timeAddress"><b>Address: </b> 15 Adr street, 5015, NY</p>
+        <div id="menu" class="menu">
+            <h1 class="aboutHead menuHead">THE MENU</h1>
+        </div>
+            <div class="column">
+                <div class="menuRowDiv">
+                    <h1 id="eat" onclick="changeChoice('eat')" class="choice select">Eat</h1>
+                    <h1 id="drink" onclick="changeChoice('drink')" class="choice">Drink</h1>
+                </div>
+                    <div id="eatDiv" class="mainMenuDiv">
+                        <h1 class="menuName">Bread Basket</h1>
+                        <p class="menuIntro">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                        <h1 class="menuName">Honey Almond Granola with Fruits</h1>
+                        <p class="menuIntro">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                        <h1 class="menuName">Belgian Waffle</h1>
+                        <p class="menuIntro">Vanilla flavored batter with malted flour 7.50</p>
+                        <h1 class="menuName">Scrambled eggs</h1>
+                        <p class="menuIntro">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                        <h1 class="menuName">Blueberry Pancakes</h1>
+                        <p class="menuIntro">With syrup, butter and lots of berries 8.50</p>
+                    </div>
+                    <div id="drinkDiv" class="mainMenuDiv hidden">
+                        <h1 class="menuName">Coffee</h1>
+                        <p class="menuIntro">Regular coffee 2.50</p>
+                        <h1 class="menuName">Chocolato</h1>
+                        <p class="menuIntro">Chocolate espresso with milk 4.50</p>
+                        <h1 class="menuName">Corretto</h1>
+                        <p class="menuIntro">Whiskey and coffee 5.00</p>
+                        <h1 class="menuName">Iced tea</h1>
+                        <p class="menuIntro">Hot tea, except not hot 3.00</p>
+                        <h1 class="menuName">Soda</h1>
+                        <p class="menuIntro">Coke, Sprite, Fanta, etc. 2.50</p>
+                    </div>
+            </div>
+        <img class="cafePic" src="https://www.w3schools.com/w3images/coffeehouse2.jpg"/>
+        <div id="where" class="addressDiv">
+            <h1 class="aboutHead menuHead where">WHERE TO FIND US</h1>
+            <p class="findUs">Find us at some address at some place.</p>
+            <img class="cafePic" src="https://www.w3schools.com/w3images/map.jpg" width="100%"/>
+            <p class="offer"><b class="fyi">FYI!</b> We offer full-service catering for any event, large or small. We 
+            understand your needs and we will cater the food to satisfy the biggerst criteria of 
+            them all, both look and taste.</p>
+            <p class="reserve"><b>Reserve</b> a table, ask for today's special or just send us a message:</p>
+            <input placeholder="Name" class="input" />
+            <input placeholder="How many people" class="input" />
+            <input class="input" type="datetime-local" value="2020-11-16T20:00"/>
+            <input class="input" placeholder="Message \ Special requirements" />
+            <button class="button">SEND MESSAGE</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="powered">Powered by w3.css</p>
+    </div>
+    </div>
+</body>
+<script>
+    let choice = 'eat';
+    function changeChoice(val){
+        choice = val;
+        if(choice == 'eat'){
+            document.getElementById('eat').className = "select choice";
+            document.getElementById('drink').className = "choice";
+            document.getElementById('drinkDiv').className = 'hidden'
+            document.getElementById('eatDiv').className = 'mainMenuDiv'
+        }
+        else{
+            document.getElementById('drink').className = "select choice";
+            document.getElementById('eat').className = "choice";
+            document.getElementById('eatDiv').className = ' hidden'
+            document.getElementById('drinkDiv').className = 'mainMenuDiv'
+
+        }
+    }
+</script>
+</html>
