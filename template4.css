@@ -8,6 +8,9 @@ body{
     font-size: 15px;
     font-family: "Inconsolata", sans-serif;
 }
+.w3Link:hover{
+    color: rgb(76, 175, 80);
+}
 .navbar{
     position: fixed;
     top: 0;
@@ -184,6 +187,7 @@ img{
 .column{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .offer{
     margin: 18.5px 0;
